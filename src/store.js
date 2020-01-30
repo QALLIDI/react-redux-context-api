@@ -1,6 +1,6 @@
 import React , { createContext, useReducer } from 'react'
 
-const initialState = {}
+const initialState = {color : 'red'}
 const store = createContext(initialState)
 const { Provider } = store
 
@@ -10,7 +10,7 @@ const StateProvider = ({ children }) => {
             case 'ADD_USER' :
                 return state;
             default :
-                throw new Error();  
+                return state;  
         }
     }, initialState)
     return <Provider value = {{ state, dispatch }}>{ children }</Provider>
