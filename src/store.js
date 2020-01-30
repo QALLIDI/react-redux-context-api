@@ -1,5 +1,4 @@
-import React , { useContext, useState, useReducer } from 'react'
-import { ADD_USER, REMOVE_USER, LIST_USERS, GET_USER, DETAIL_USER } from './actions/Constantes'
+import React , { useContext, useReducer } from 'react'
 
 const initialState = {}
 const store = useContext(initialState)
@@ -8,7 +7,7 @@ const { Provider } = store
 const StateProvider = ({ children }) => {
     const [state, dispatch] = useReducer((state,action) => {
         switch(action.type) {
-            case ADD_USER :
+            case 'ADD_USER' :
                 return state;
             default :
                 throw new Error();  
