@@ -1,7 +1,7 @@
-import React , { useContext, useReducer } from 'react'
+import React , { createContext, useReducer } from 'react'
 
 const initialState = {}
-const store = useContext(initialState)
+const store = createContext(initialState)
 const { Provider } = store
 
 const StateProvider = ({ children }) => {
