@@ -5,7 +5,7 @@ const initialState = {}
 const store = useContext(initialState)
 const { Provider } = store
 
-const stateProvider = ({ children }) => {
+const StateProvider = ({ children }) => {
     const [state, dispatch] = useReducer((state,action) => {
         switch(action.type) {
             case ADD_USER :
@@ -17,4 +17,4 @@ const stateProvider = ({ children }) => {
     return <Provider value = {{ state, dispatch }}>{ children }</Provider>
 }
 
-export { store, stateProvider }
+export { store, StateProvider }

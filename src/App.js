@@ -1,10 +1,6 @@
 import React, { useContext } from 'react';
 
-function App() {
-  const newContext = React.createContext({ color : 'black' });
-  const value = useContext(newContext);
-  console.log('{ color : ', value.color+' }');
-  
+function App() {  
   return (
     <div className="App">
         <h1>~</h1>
